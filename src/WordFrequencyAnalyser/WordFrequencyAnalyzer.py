@@ -1,6 +1,7 @@
 """This module contains the Word Frequency and WordFrequencyAnalyser"""
 from typing import List
 import re
+
 from src.utils.utils import cal_frequency
 
 
@@ -67,14 +68,7 @@ class WordFrequencyAnalyzer():
         :return
         highest frequency of the word in the text
         """
-        if not isinstance(text, str):
-            raise TypeError("text should be string")
-        if len(text.strip()) == 0:
-            raise ValueError("text cannot be empty, please enter the input")
-        if re.search("[@_!#$%^&*()<>?/|}{~:]", text):
-            # raise ValueError("text cannot contain special characters")
-            text = re.sub(r"[\[\]@_!#$%^&*()<>?/|}{~:]+", " ", text)
-            text = text.strip()
+        text = cal_frequency.data_validator(text)
         highest_freq = cal_frequency.calculate_frequency(text)[0][1]
         return cal_frequency.calculate_frequency(text)[0][0], highest_freq
 
@@ -88,18 +82,7 @@ class WordFrequencyAnalyzer():
         :return
         frequency of given word
         """
-        if not isinstance(text, str):
-            raise TypeError("text should be string")
-        if len(text.rstrip()) == 0:
-            raise ValueError("text cannot be empty, please enter the input")
-        if not isinstance(word, str):
-            raise TypeError("word should be string")
-        if len(word.rstrip()) == 0:
-            raise ValueError("word cannot be empty, please enter the input")
-        if re.search("[\[\]@_!#$%^&*()<>?/|}{~:]+", text):
-            # raise ValueError("text cannot contain special characters")
-            text = re.sub(r"[@_!#$%^&*()<>?/|}{~:]+", " ", text)
-            text = text.strip()
+        text = cal_frequency.data_validator(text)
         count = 0
         word_list = text.split(" ")
         for wrd in word_list:
@@ -118,18 +101,7 @@ class WordFrequencyAnalyzer():
 
         """
 
-        if not isinstance(text, str):
-            raise TypeError("text should be string")
-        if not isinstance(n, int):
-            raise TypeError("value of n must be integer type")
-        if len(text.strip()) == 0:
-            raise ValueError("text cannot be empty")
-        if n < 1:
-            raise ValueError("most common frequency should be greater than 0")
-        if re.search("[@_!#$%^&*()<>?/|}{~:]", text):
-            # raise ValueError("text cannot contain special characters")
-            text = re.sub(r"[\[\]@_!#$%^&*()<>?/|}{~:]+", " ", text)
-            text = text.strip()
+        text = cal_frequency.data_validator(text)
         result = cal_frequency.calculate_n_frequency(text, n)
         # List of Wordfrequency
         word_freq_list = [(WordFrequency.word, WordFrequency.frequency)]
@@ -137,5 +109,4 @@ class WordFrequencyAnalyzer():
 
         for i in range(0, len(result)):
             word_freq_list.append(result[i])
-
         return word_freq_list
