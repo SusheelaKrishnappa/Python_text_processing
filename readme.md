@@ -73,5 +73,5 @@ RaboCodingAssignment
 
 ### Use of 3rd Party Python Libraries
 
-- pytest 6.2.3
+- pytest 7.1.2
 
