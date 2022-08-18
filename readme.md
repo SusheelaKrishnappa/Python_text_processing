@@ -1,11 +1,12 @@
 # Python Coding Assignment
 
- 
+## Requirements
+
+- Python latest version
 
 ## Usage
 
  
-
 This projects supports four user interaction interfaces
 
 - ### ```main.py``` runs on command prompt,
@@ -39,32 +40,32 @@ python -m pytest
 
 RaboCodingAssignment
 
-├── src  # python package
+├── src  
 
-│   ├── utils # python package to contain utility modules
+│   ├── utils 
 
-│   │   ├── __init__.py   # to make directory into package
+│   │   ├── __init__.py   
 
-│   │   └── utils.py # contains utility functions to process text
+│   │   └── utils.py 
 
 │   │
-│   ├── WordFrequencyAnalyser# 
+│   ├── WordFrequencyAnalyser
 
-│   │  ├── __init__.py   # to make directory into package
+│   │  ├── __init__.py   
 
-│   │  └── WordFrequencyAnalyser.py# contains Executor class to execute
+│   │  └── WordFrequencyAnalyser.py
 
-│                                   #WordFrequencyAnalyzer functions
+│                                   
 
 │   
 
-├── tests # test directory
+├── tests 
 
-│   │   ├── __init__.py  # to make directory into package
+│   │   ├── __init__.py  
 
-│   │   └── test_WordFrequencyAnalyzer.py    # contains test_inputs
+│   │   └── test_WordFrequencyAnalyzer.py    
 
-│   │   ├── conftest.py  # contains text fixtures  
+│   │   ├── conftest.py  
 
 
 ├── main.py # command prompt interface for user
@@ -75,8 +76,6 @@ RaboCodingAssignment
 
 
 ### Use of 3rd Party Python Libraries
-
-- Flask 1.1.2
 
 - pytest 6.2.3
 
