@@ -53,11 +53,7 @@ RaboCodingAssignment
 
 │   │  ├── __init__.py   
 
-│   │  └── WordFrequencyAnalyser.py
-
-│                                   
-
-│   
+│   │  └── WordFrequencyAnalyser.py                                 
 
 ├── tests 
 
