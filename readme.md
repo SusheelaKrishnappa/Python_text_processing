@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Python latest version
+- Python 3.9 
 
 ## Usage
 
